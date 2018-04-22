@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function listOfAdmin() {
+        return ($this->email === 'florent.morel@gmail.com'
+        || $this->email === 'a.pro.guyot@gmail.com'
+        || $this-> email === 'sourisseauguillaume@gmail.com');
+    }
+
+
+    public function specifications()
+    {
+        return $this->belongsTo('App\Specifications');
+    }
 }

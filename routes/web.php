@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', 'HomeController@home')->name('home');
-
-Auth::routes();
-
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Auth::routes();
+
+
+Route::get('/specification', 'SpecificationsController@show')->name('show_specification');
+Route::get('liste_specifications', 'SpecificationsController@liste')->name('liste_specifications');
+Route::post('/specifications', 'SpecificationsController@create')->name('specifications');
+
+Route::get('/remerciement', 'SpecificationsController@endOfCreate')->name('remerciement');

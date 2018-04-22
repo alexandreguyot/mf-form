@@ -2,21 +2,26 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Tableau de bord</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Vous êtes connecté !
-                </div>
-            </div>
+    <div class="card">
+        <div class="card-header">
+            @if (Auth::user()->listOfAdmin())
+                Liste des clients
+            @else
+                Création du cahier des charges
+            @endif
+        </div>
+        <div class="card-body">
+            @if (Auth::user()->listOfAdmin())
+                <form method="GET" action="{{route('liste_specifications') }}">
+                    <input type="submit" value="Consulter la liste des spécifications">
+                </form>
+            @else
+                <form method="GET" action="{{route('liste_specifications') }}">
+                    <input type="button" value="Création des specifications">
+                </form>
+                <input type="button" value="Création des specifications">
+                <input type="button" value="Consulter ces spécifications">
+            @endif
         </div>
     </div>
 </div>
