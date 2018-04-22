@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Redirect;
 class SpecificationsController extends Controller
 {
     public function show() {
-
+        return view('back-end.specification');
     }
 
     public function create(Request $request) {

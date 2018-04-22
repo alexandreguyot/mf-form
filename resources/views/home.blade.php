@@ -16,11 +16,13 @@
                     <input type="submit" value="Consulter la liste des spécifications">
                 </form>
             @else
-                <form method="GET" action="{{route('liste_specifications') }}">
-                    <input type="button" value="Création des specifications">
+                <form method="GET" action="{{route('show_specification') }}">
+                    <input type="submit" value="Création des specifications">
                 </form>
-                <input type="button" value="Création des specifications">
-                <input type="button" value="Consulter ces spécifications">
+
+                <form method="GET" action="{{route('liste_specifications') }}">
+                    <input type="button" value="Consulter ces spécifications">
+                </form>
             @endif
         </div>
     </div>
