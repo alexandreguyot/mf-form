@@ -9,17 +9,14 @@ use Illuminate\Support\Facades\Redirect;
 class SpecificationsController extends Controller
 {
     public function show() {
-        return view('back-end.specification');
+        return view('specification');
     }
-
     public function create(Request $request) {
         $specification = new Specifications();
         $specification->fill($request->all());
-        $specification->save();
-        return Redirect::route('remerciement');
-    }
 
-    public function endOfCreate() {
-        return view('thanks');
+        if ($specification->save()) {
+            return view('thanks');
+        }
     }
 }
