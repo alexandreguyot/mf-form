@@ -1,4 +1,4 @@
-{{--<script src="{{ asset('js/application.js') }}" defer></script>--}}
+<script src="{{ asset('js/application.js') }}" defer></script>
 
 <form id="cahier_charges" method="POST" action="{{ route('create_specification') }}">
     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
