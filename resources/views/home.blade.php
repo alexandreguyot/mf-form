@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="card">
-        <div class="card-header">
+<div class="">
+    <div class="">
+        <div class="title">
             @if (Auth::user()->listOfAdmin())
                 Liste des clients
             @else
-                Création du cahier des charges
+               Création du cahier des charges
             @endif
         </div>
-        <div class="card-body">
+        <div class="home-action">
             @if (Auth::user()->listOfAdmin())
                 <form method="GET" action="{{route('liste_specifications') }}">
                     <input type="submit" value="Consulter la liste des spécifications">

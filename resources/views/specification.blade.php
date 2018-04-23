@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container">
-        <div class="card">
-            <div class="card-header">
+        <div class="">
+            <div class="title">
                     Création du cahier des charges
             </div>
-            <div class="card-body">
+            <div class="">
                 @include('form')
             </div>
         </div>

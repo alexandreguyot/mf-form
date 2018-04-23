@@ -1,3 +1,293 @@
 body {
+	background-image: linear-gradient(to right top, #19cce7, #00a5d3, #007fba, #005a9c, #0a3578);
+	height: 100vh;
+	overflow-x: hidden;
+	* {
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		transition: all 0.5s;
+		font-family: 'Open sans';
+	}
+	nav.navbar-laravel {
+		background-color: #ffffff0d;
+		box-shadow: none;
+		> .container {
+			background: none;
+			max-width: 900px;
+			padding: 10px 0;
+			.navbar-brand, a.nav-link {
+				color: #fff;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	main.py-4{
+		text-align: center;
+		> .container {
+			padding: 10px 30px 0;
+			background-color: #ffffff;
+			border-radius: 0px;
+			box-shadow: 0 50px 0px -30px rgba(0,0,0,0.15);
+		}
+		form {
+			position: relative;
+			padding: 0 10px 40px;
+			div.tab {
+				div.subtitle {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					&:after {
+						content: '';
+						position: absolute;
+						height: 2px;
+						background-color: #eee;
+						top: 47px;
+						width: 100%;
+						right: 0;
+						z-index: 0;
+					}
+					h1, h2 {
+						padding: 0 20px;
+						margin: 30px 0 20px;
+						font-weight: bold;
+						color: #0099cb;
+						position: relative;
+						background: white;
+						z-index: 1;
+					}
+				}
+				ul {
+					li {
+						list-style-type: none;
+						color: #a9a9a9;
+					}
+				}
+				h3 {
+					font-size: 18px;
+					color: #666;
+					margin: 0 0 15px;
+				}
+				h4 {
+					font-family: 'Sura', serif;
+					font-size: 16px;
+					color: #666;
+					margin: 0 0 20px;
+				}
+				label {
+					display: none;
+					&.radio-inline {
+						display: block;
+					}
+				}
+				input {
+					text-align: center;
+					border: 1px solid #fff;
+					border-radius: 2px;
+					background: #eee;
+					padding: 15px;
+					&:hover {
+						background-color: rgba(0,0,0,0.05);
+					}
+					&:focus {
+						border-color: #ccc;
+						outline: none;
+						background-color: rgba(0,0,0,0.02);
+					}
+					&.invalid {
+						border-color: #0bb7dc;
+						background: white;
+					}
+				}
+				textarea {
+					width: 100%;
+					min-height: 200px;
+					border: 1px solid #dddd;
+					padding: 20px;
+					&:hover {
+						background-color: rgba(0,0,0,0.05);
+					}
+					&:focus {
+						border-color: #ccc;
+						outline: none;
+					}
+					&.invalid {
+						border-color: #0bb7dc;
+						background: white;
+					}
+				}
+				/* Customize the label (the container) */
+				.container-radio {
+					display: block;
+					position: relative;
+					padding: 0 25px 0 35px;
+					margin-bottom: 12px;
+					cursor: pointer;
+					font-size: 16px;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+					display: inline-block;
+					text-align: left;
+				}
 
+				/* Hide the browser's default radio button */
+				.container-radio input {
+					position: absolute;
+					opacity: 0;
+				}
+
+				/* Create a custom radio button */
+				.checkmark {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 25px;
+					width: 25px;
+					background-color: #eee;
+					border-radius: 50%;
+				}
+
+				/* On mouse-over, add a grey background color */
+				.container-radio:hover input ~ .checkmark {
+					background-color: #ccc;
+				}
+
+				/* When the radio button is checked, add a blue background */
+				.container-radio input:checked ~ .checkmark {
+					background-color: #2196F3;
+				}
+
+				/* Create the indicator (the dot/circle - hidden when not checked) */
+				.checkmark:after {
+					content: "";
+					position: absolute;
+					display: none;
+				}
+
+				/* Show the indicator (dot/circle) when checked */
+				.container-radio input:checked ~ .checkmark:after {
+					display: block;
+				}
+
+				/* Style the indicator (dot/circle) */
+				.container-radio .checkmark:after {
+					top: 9px;
+					left: 9px;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background: white;
+				}
+			}
+			div.nav-footer {
+				width: calc(~'100% + 60px');
+				position: absolute;
+				left: -30px;
+				bottom: -130px;
+				> div {
+					width: 100%;
+					display: flex;
+					button {
+						width: 50%;
+						border: none;
+						padding: 20px 0;
+						font-size: 20px;
+						font-weight: bold;
+						color: white;
+						background: #00000012;
+						&:first-child {
+
+						}
+						&:last-child {
+
+						}
+						&:hover {
+							cursor: pointer;
+							background-color: #0099cb;
+							color: white;
+						}
+						&:focus {
+							outline: none;
+						}
+					}
+				}
+			}
+		}
+		div.thanks {
+			padding: 50px 0;
+		}
+		div.auth {
+			padding: 50px 0;
+			label {
+				font-size: 16px;
+				color: white;
+				line-height: 28px;
+			}
+			input {
+				border: none;
+				border-radius: 4px;
+				padding: 10px;
+				margin: 0 0 8px;
+			}
+			button {
+				padding: 15px 30px;
+				border-radius: 4px;
+				border: 2px solid white;
+				background: none;
+				font-size: 16px;
+				float: right;
+			}
+		}
+		div.home-action {
+			padding: 30px 0 50px;
+			width: 900px;
+			margin: auto;
+			form {
+				float: left;
+				width: 50%;
+				input {
+					background: none;
+					border: 2px solid #fff;
+					padding: 20px;
+					color: white;
+					cursor: pointer;
+					font-size: 20px;
+					border-radius: 5px;
+					background-color: rgba(255,255,255,0.10);
+					&:hover {
+						background-color: rgba(255,255,255,0.22);
+					}
+				}
+				&:last-child {
+					input {
+						opacity: 0.4;
+					}
+				}
+			}
+		}
+	}
+	div.title {
+		color: #ffffff;
+		font-size: 40px;
+		position: absolute;
+		top: 115px;
+		text-align: center;
+		width: 100%;
+		left: 0;
+		font-family: 'Sura', serif;
+	}
+}
+@media (min-width: 1200px) {
+	main.py-4{
+		margin: 110px 0 0;
+		> .container {
+			max-width: 900px;
+		}
+	}
 }
