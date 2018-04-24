@@ -60,15 +60,15 @@
         </div>
         <div class="form-group">
             <label class="container-radio">Création d'un site internet
-                <input type="radio" name="website">
+                <input type="radio" name="website" value="1">
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">Amélioration graphique
-                <input type="radio" name="website">
+                <input type="radio" name="website" value="2">
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">Refonte technique
-                <input type="radio" name="website">
+                <input type="radio" name="website" value="3">
                 <span class="checkmark"></span>
             </label>
         </div> 
@@ -85,16 +85,16 @@
         <h3>Je possède un nom de domaine</h3>
         <div class="form-group">
             <label class="container-radio">
-              <input type="radio" name="domain_have"> Oui
+              <input type="radio" name="domain_have" value="1" onclick="showDomainModel(this)" required> Oui
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-              <input type="radio" name="domain_have"> Non
+              <input type="radio" name="domain_have" value="0" onclick="showDomainModel(this)" required> Non
                 <span class="checkmark"></span>
             </label>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12 hidden">
                 <div class="form-group row">
                     <label for="domain_name" class="col-md-4 col-form-label text-md-right">Mon nom de domaine est ...</label>
                     <div class="col-md-12">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12 hidden">
                 <div class="form-group row">
                     <label for="domain_wanted" class="col-md-4 col-form-label text-md-right">Je souhaite obtenir ce nom de domaine ...</label>
                     <div class="col-md-12">
@@ -120,22 +120,22 @@
         <h3>Je rédige le texte de mon site internet</h3> 
         <div class="form-group">
             <label class="container-radio">
-                <input type="radio" name="write_text"> Oui
+                <input type="radio" name="write_text" value="1"> Oui
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="write_text"> Non
+                <input type="radio" name="write_text" value="0"> Non
                 <span class="checkmark"></span>
             </label>
         </div>
         <h3>Je possède des photos pour mon site internet</h3> 
         <div class="form-group">
             <label class="container-radio">
-                <input type="radio" name="have_picture"> Oui
+                <input type="radio" name="have_picture" value="1"> Oui
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="have_picture"> Non
+                <input type="radio" name="have_picture" value="0"> Non
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -143,15 +143,15 @@
         <h4>Les pages statiques sont : “Accueil”, “Société” et “Contact”</h4> 
         <div class="form-group">
             <label class="container-radio">
-                <input type="radio" name="number_pages"> 1 page
+                <input type="radio" name="number_pages" value="1"> 1 page
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="number_pages"> 2 à 5 pages
+                <input type="radio" name="number_pages" value="2"> 2 à 5 pages
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="number_pages"> 6 pages et +
+                <input type="radio" name="number_pages" value="3"> 6 pages et +
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -163,26 +163,26 @@
         <h3>Je possèdes des éléments graphiques (charte, logo, etc..)</h3>
         <div class="form-group">
             <label class="container-radio">
-                <input type="radio" name="graphic_have"> Oui
+                <input type="radio" name="graphic_have" value="1"> Oui
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="graphic_have"> Non
+                <input type="radio" name="graphic_have" value="0"> Non
                 <span class="checkmark"></span>
             </label>
         </div>
         <h3>Choisissez parmis la mise en forme souhaitée parmis les choix suivants</h3>
         <div class="form-group">
             <label class="container-radio">
-                <input type="radio" name="example"> Choix A
+                <input type="radio" name="example" value="1"> Choix A
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="example"> Choix B
+                <input type="radio" name="example" value="2"> Choix B
                 <span class="checkmark"></span>
             </label>
             <label class="container-radio">
-                <input type="radio" name="example"> Choix C
+                <input type="radio" name="example" value="3"> Choix C
                 <span class="checkmark"></span>
             </label>
         </div>

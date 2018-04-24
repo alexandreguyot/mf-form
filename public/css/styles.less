@@ -8,7 +8,7 @@ body {
 		-ms-transition: all 0.5s;
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
-		font-family: 'Open sans';
+		font-family: 'Open sans' !important;
 	}
 	nav.navbar-laravel {
 		background-color: #ffffff0d;
@@ -18,9 +18,9 @@ body {
 			max-width: 900px;
 			padding: 10px 0;
 			.navbar-brand, a.nav-link {
-				color: #fff;
+				color: #fff !important;
 				&:hover {
-					color: #fff;
+					color: #fff !important;
 				}
 			}
 		}
@@ -36,7 +36,14 @@ body {
 		form {
 			position: relative;
 			padding: 0 10px 40px;
+			div.hidden {
+				display: none;
+			}
+			div.show {
+				display: block;
+			}
 			div.tab {
+				display: none;
 				div.subtitle {
 					position: relative;
 					display: flex;
@@ -90,6 +97,8 @@ body {
 					border-radius: 2px;
 					background: #eee;
 					padding: 15px;
+					width: 100%;
+					font-size: 17px;
 					&:hover {
 						background-color: rgba(0,0,0,0.05);
 					}
@@ -99,7 +108,7 @@ body {
 						background-color: rgba(0,0,0,0.02);
 					}
 					&.invalid {
-						border-color: #0bb7dc;
+						border-color: #ff3135;
 						background: white;
 					}
 				}
